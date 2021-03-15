@@ -1,21 +1,42 @@
 
+//colors
 $white: #F8F8F8;
 $black: #353535;
+
+//typography
+$neuehaas: 'neue-haas-grotesk-display', sans-serif;;
+$bcsklonar: 'bc-sklonar', sans-serif;
+$thin: 200;
+$light: 400;
+$roman: 500;
+$medium: 600; 
+$wide: 1rem;
+$expanded: .2rem;
+
+//breakpoints
+$mobile: 500px;
+$tablet: 600px;
+$medium: 800px;
+$large: 1250px;
+$xlarge: 1400px;
 
 body {
     background-color: $white;
     margin: 0;
+    font-family: $neuehaas;
+    color: $black;
 }
 
 .layoutContainer{
     width: 100vh;
     grid-template-rows: 100vh 10vh;
-    grid-template-columns: 20% 90%;
+    grid-template-columns: 15% auto;
     display: grid;
     grid-template-areas: 
     "header content"
     "footer footer";
     width: auto;
+    overflow: hidden;
 }
 
 header { 
@@ -25,37 +46,59 @@ header {
     justify-content: center;
 }
 
-.burger{
-    display: block;
-    height: 2px;
-    width: 40px;
-    background-color: $black;
-
-    &:hover{
-        width: 50px; 
-    }
+.burgerBtn{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    flex-wrap: wrap;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease;
+    transform-origin: center;
+    z-index: 100;
 }
 
-.burger:before, .burger:after{
-    content: " ";
-    display: block;
-    height: 2px;
-    width: 50px;
-    background-color: $black;
-    position: relative;
+
+.menuContainer{
+    margin-left: 15vw;
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: $black;
+    border-left: 2px solid $black;
 }
 
-.burger:before{
-    top: -10px
+.menuContainer :last-child{
+    border: none;
 }
 
-.burger:after{
-   top: 9px;
+.menuContainer div {
+    padding-left: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: $light;
+    border-bottom: 2px solid $black;
+    letter-spacing: $expanded;
+    transition: letter-spacing 500ms ease, background-color 200ms ease;
+}
+
+.menuContainer div:hover{
+background-color: $black;
+color: $white;
+letter-spacing: $wide;
 }
 
 main{
 border-left: 2px solid $black;
-width: 10vw;
+width: 100%;
 min-height: 100vh;
 display: flex;
 align-items: center;

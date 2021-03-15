@@ -1,6 +1,7 @@
 import * as React from "react"
-import globalStyles from '../styles/global.scss'
-import { Children } from "react"
+import '../styles/global.scss'
+import '../styles/fonts.css'
+import BurgerMenu from './burger.js'
 
 
 const Layout = ({children}) => {
@@ -9,8 +10,7 @@ const Layout = ({children}) => {
     return (
         <div className="layoutContainer">
         <header>
-            <div className = "burger"/>
-
+           <BurgerMenu/>
         </header>
 
         <main>
