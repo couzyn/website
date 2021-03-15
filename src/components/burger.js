@@ -9,10 +9,17 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 transition: all 200ms ease;
-transform: ${({ isClicked }) => isClicked ? "rotate(90deg)" : "rotate(0)"};
+transform: ${({ isClicked }) => isClicked ? "rotate(0deg)" : "rotate(90deg)"};
 
 &:hover{
-    transform: rotate(90deg);
+    transform: rotate(0deg);
+}
+
+@media (max-width: 600px) {
+    transform: rotate(0deg);
+    &:hover{
+        transform: rotate(00deg);
+    }
 }
 
 div{
@@ -40,14 +47,16 @@ div{
 
 const MenuSlider = styled.div`
 
-width: 100vw;
-background-color: #F8F8F8;
+width: 100%;
 height: 100vh;
 position: absolute;
 left: 0;
-transform: ${({ isClicked }) => isClicked ? "translateX(0)" : "translateX(-100%)"};
+top: 0;
+transform: ${({ isClicked }) => isClicked ? "translateX(0%)" : "translateX(-100%)"};
 transition: all 500ms ease;
 border-right: solid 2px #353535;
+padding: 0;
+margin: 0;
 `
 
 const BurgerMenu = () => {

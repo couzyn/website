@@ -11,6 +11,7 @@ $light: 400;
 $roman: 500;
 $medium: 600; 
 $wide: 1rem;
+$spaced: .5rem;
 $expanded: .2rem;
 
 //breakpoints
@@ -29,7 +30,7 @@ body {
 
 .layoutContainer{
     width: 100vh;
-    grid-template-rows: 100vh 10vh;
+    grid-template-rows: auto 10vh;
     grid-template-columns: 15% auto;
     display: grid;
     grid-template-areas: 
@@ -72,6 +73,7 @@ header {
     justify-content: center;
     color: $black;
     border-left: 2px solid $black;
+    background-color: $white;
 }
 
 .menuContainer :last-child{
@@ -80,7 +82,7 @@ header {
 
 .menuContainer div {
     padding-left: 3rem;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -93,7 +95,7 @@ header {
 .menuContainer div:hover{
 background-color: $black;
 color: $white;
-letter-spacing: $wide;
+letter-spacing: $spaced;
 }
 
 main{
@@ -113,5 +115,44 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+@media (max-width: $tablet) {
+
+    .layoutContainer{
+        grid-template-rows: 15vh auto 10vh;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "header"
+        "content" 
+        "footer";
+    }
+
+    header { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid $black;
+        top: 0;
+    }
+
+    main{
+        border: none;
+        min-height: 85vh;
+    }
+    
+    .menuContainer{
+        height: 85vh;
+        top: 15vh;
+        width: 100vw;
+        left: -15vw;
+        border-left: none;
+        border-bottom: 2px solid $black;
+        position: fixed;
+        z-index: 101;
+        background-color: $white;
+        position: relative;
+    }
 
 }
