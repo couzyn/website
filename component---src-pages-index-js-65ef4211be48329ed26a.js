@@ -1,2 +1,0 @@
-(self.webpackChunkcouzyn_at=self.webpackChunkcouzyn_at||[]).push([[678],{704:function(e,n,u){"use strict";u.r(n);var t=u(294);n.default=function(){return t.createElement("main",null,"Hello World")}}}]);
-//# sourceMappingURL=component---src-pages-index-js-65ef4211be48329ed26a.js.map

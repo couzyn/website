@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://couzyn.at/./src/pages/index.js"],"names":[],"mappings":"8HAWA,UARkB,WAChB,OACE","file":"component---src-pages-index-js-65ef4211be48329ed26a.js","sourcesContent":["import * as React from \"react\"\n\n\nconst IndexPage = () => {\n  return (\n    <main>\n     Hello World\n    </main>\n  )\n}\n\nexport default IndexPage\n"],"sourceRoot":""}
