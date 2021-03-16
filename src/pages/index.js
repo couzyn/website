@@ -11,7 +11,7 @@ const IndexPage = () => {
       <div className ="startContent">
         <div className = "logoContainer">
           <div className = "logo">
-          <img src = {Logo} alt ="cmnczn" style = {{width: "96%"}}/>
+          <img src = {Logo} alt ="cmnczn" style = {{width: "50%"}}/>
           <h1 className = "logoTitle">Carmen CØuzyn</h1>  
           <h2 className = "logoSubtitle">Design & Development</h2>       
           </div>
