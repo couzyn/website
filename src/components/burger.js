@@ -4,10 +4,10 @@ import styled from "styled-components"
 
 const BurgerSlices = styled.div`
 width: 55px;
-height: 55px;
+height: 50px;
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: space-around;
 transition: all 200ms ease;
 transform: ${({ isClicked }) => isClicked ? "rotate(0deg)" : "rotate(90deg)"};
 
@@ -29,7 +29,7 @@ div{
     flex-shrink: 0;
     background-color: #353535;
     transition: transform 200ms ease;
-    transform-origin: 4px;
+    transform-origin: 1px;
 
     :nth-child(1){
         transform: ${({ isClicked }) => isClicked ? "rotate(45deg)" : "rotate(0)"};

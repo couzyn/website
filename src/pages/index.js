@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout.js"
 import '../styles/start.scss'
-import Logo from '../img/cmnczyn.svg'
+import Logo from '../img/cmnzyn.svg'
 
 
 
